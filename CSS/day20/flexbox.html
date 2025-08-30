@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox</title>
+    <style>
+        .container{
+            height: 500px;
+            width:500vw;
+            padding:20px;
+            background-color: azure;
+            border: 5px solid black;
+            display: flex;;
+            /* flex-direction: row; */
+            /* flex-direction: row-reverse; */
+            flex-direction: column;
+            /* flex-direction: column-reverse; */
+            /* justify-content: center; */
+            /* align-items: right; */
+        }
+        .box{
+            margin: 5px;
+            padding: 10px;
+            display: flex;
+        }
+        .box1{
+            background-color: red;
+            height: 100px;
+            width: 100px;
+        }
+        .box2{
+            background-color: violet;
+            height: 100px;
+            width: 100px;
+        }
+        .box3{
+            background-color: blue;
+            height: 100px;
+            width: 100px;
+        }
+        .box4{
+            background-color: yellow;
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="box1"><h1>Likki</h1></div>
+            <div class="box2"><h1>Veera</h1></div>
+            <div class="box3"><h1>Sam</h1></div>
+            <div class="box4"><h1>Deeksi</h1></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hair Studio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(to bottom, rgba(212, 0, 0, 0.405), rgb(212, 0, 0)),url('https://images.pexels.com/photos/1813272/pexels-photo-1813272.jpeg?cs=srgb&dl=pexels-thgusstavo-1813272.jpg&fm=jpg&_gl=1*atiwx7*_ga*NTQ3MjQ1MTIzLjE3MDQ2MTk4OTQ.*_ga_8JE65Q40S6*MTczNTIwNTU4My4xOC4xLjE3MzUyMDU2MTAuMC4wLjA.') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            /* justify-content: space-between; */
+            color: white;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: rgba(0, 0, 0, 0);
+        }
+
+        .navbar .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar ul li {
+            font-size: 18px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            transition: color 0.3s;
+        }
+
+        .navbar ul li a:hover {
+            color: #00bcd4;
+        }
+
+        .hero-content {
+            text-align: center;
+            align-content: center;
+            margin-top: 250px;
+            margin-bottom: 50px;
+        }
+
+        .hero-content h1 {
+            font-size: 60px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .buttons a {
+            padding: 10px 20px;
+            font-size: 18px;
+            text-decoration: none;
+            color: white;
+            /* background: #00bcd4; */
+            border-radius: 5px;
+            border: 1px solid white;
+            transition: background 0.3s ;
+        }
+
+        .buttons a:hover {
+            background: #ffffff;
+            color: #ff0808;
+        }
+        .features-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px 100px;
+            background: #f9f9f9;
+        }
+
+        .features-text {
+            width: 100%;
+        }
+
+        .features-header {
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: bold;
+            color: #d40000;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .feature_left{
+            width: 400px;
+            align-content: center;
+        }
+        .features-title {
+            font-size: 36px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .feature_total{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .feature_total1{
+            width: 70%;
+            display: flex;
+            justify-content: space-between;
+            gap: 50px;
+        }
+        .feature {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .feature-icon {
+            font-size: 30px;
+            color: #d40000;
+            margin-right: 15px;
+        }
+
+        .feature-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .feature-desc {
+            font-size: 16px;
+            color: #666;
+        }
+
+        .features-image {
+            height: 400px;
+            width: 300px;
+            border-radius: 10px;
+            background: linear-gradient(to bottom, rgba(212, 0, 0, 0.405), rgba(212, 0, 0, 0.862)),url('https://images.pexels.com/photos/331989/pexels-photo-331989.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center/cover;
+            position: relative;
+            margin-left: auto;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .features-section {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .features-text,
+            .features-image {
+                width: 100%;
+            }
+
+            .features-image {
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+
+        <div class="navbar">
+            <div class="logo">BARBER</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#meet">Meet us</a></li>
+                <li><a href="account">Account</a></li>
+            </ul>
+        </div>
+        <div class="hero-content">
+            <h1>Hair Studio</h1>
+            <p>We Are Here To Provide You The Best Treatment And Caring For Your Lovely Hair.</p>
+            <div class="buttons">
+                <a href="#findout">Find out</a>
+                <a href="#readmore">Read More</a>
+            </div>
+        </div>
+    </div>
+    <section class="features-section">
+        <div class="features-text">
+            <div class="features-header">Features</div>
+            <h2 class="features-title">Why you choose Us</h2>
+            <div class="feature_total">
+                <div class="feature_total1">
+                    <div class="feature_left">
+                        <div class="feature">
+                            <div class="feature-icon">🛡</div>
+                            <div>
+                                <div class="feature-title">Experienced Staff</div>
+                                <div class="feature-desc">We got the best staff in town to take care of your beautiful hair. We have vast experienced hair stylists.</div>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">✅</div>
+                            <div>
+                                <div class="feature-title">Pre Booking Online</div>
+                                <div class="feature-desc">You can pre-book your appointment from home according to your convenience.</div>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">💸</div>
+                            <div>
+                                <div class="feature-title">Affordable Cost</div>
+                                <div class="feature-desc">We provide our service at very reasonable prices so you can treat your hair without thinking twice.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="features-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+</body>
+</html>

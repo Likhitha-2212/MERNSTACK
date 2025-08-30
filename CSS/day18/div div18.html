@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>div-div</title>
+    <style>
+        .first{
+            height: 400px;
+            width: 400px;
+            background-color: blue;
+
+        }
+        .second{
+            height: 80%;
+            width: 80%;
+            background-color: rgba(8, 231, 213, 0.909);
+
+        } 
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .text{
+            font-size: 20px;
+        }
+        p{
+            font-size: 5em;
+        }
+        p{
+            font-size: 5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="text">
+        <p>this is text</p>
+    </div>
+    <div class="first">
+        <p>this is parent</p>
+        <div class="second">
+            <p>this is child</p>
+        </div> 
+    </div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boxes</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            border: 2px solid black;
+            padding: 40px;
+            margin: 25px;
+            background-color: blueviolet;
+            height: 5000px;
+            /* position: relative; */
+        }
+        .box{
+            height: 45px;
+            width: 80vw;
+            padding: 10px;
+            margin: 15px;
+            border: 2px solid black;
+        }
+        .box1{
+            background-color: azure;
+            /* position: absolute; */
+            /* top: 50px;  */
+            /* top: -50px; */
+            
+        }
+        .box2{
+            background-color: bisque;
+            /* position:relative; */
+            /* top: 0px; */
+            /* top: -50px;
+            left: 50px; */
+            
+        }
+        .box3{
+            background-color: beige;
+            position: fixed;
+            /* top: 0px; */
+        }
+        .box4{
+            background-color: yellow;
+            position: sticky;
+            /* top: 0px; */
+        }
+        .box3{
+            background-color: orange;
+            position: static;
+            /* top: 0px;  */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box1">BOX</div>
+        <div class="box box2">BOX</div>
+        <div class="box box3">BOX</div>
+        <div class="box box4">BOX</div>
+        <div class="box box5">BOX</div>
+    </div>
+</body>
+</html>

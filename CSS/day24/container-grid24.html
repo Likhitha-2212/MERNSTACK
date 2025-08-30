@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style>
+        .container{
+            height: 100%;
+            width:100%;
+            background-color: aqua;
+            padding:10px;
+            display: grid;
+            /* grid-template-columns: 200px; */
+            grid-template-columns: repeat(2,100px);
+            /* grid-template-columns: repeat(3,1fr); */
+            grid-template-rows: 100px 100px 100px;
+            /* grid-template-rows: repeat(1,100px); */
+            /* grid-template-rows: repeat(3,1fr); */
+            /* row-gap: 10px; */
+            /* column-gap: 10px; */
+            gap: 10px;
+        }
+        .boxes-1{
+            /* height: 100px;
+            width:100px;  */
+            background-color: blueviolet;
+            /* justify-self: center; */
+            /* align-self: center; */ 
+            /* margin:5px; */
+            /* grid-row-start: 1;
+            grid-row-end: 3; */
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+        .boxes-2{
+            /* height: 100px;
+            width:100px; */
+            background-color: violet;
+            /* margin:5px; */
+            grid-row-start: 2;
+            grid-row-end:4 ;
+        }
+        .boxes-3{
+            /* height: 100px;
+            width:100px; */
+            background-color: blue;
+            /* margin:5px; */
+            grid-column-start: 2;
+            grid-column-end: 4;
+        }
+        .boxes-4{
+            /* height: 100px;
+            width:100px; */
+            background-color: pink;
+            /* margin:5px; */
+            grid-column-start: 2;
+            grid-column-end: 4;
+        }
+        .boxes-5{
+            /* height: 100px;
+            width:100px; */
+            background-color: yellow;
+            /* margin:5px; */
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+        .boxes-6{
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box boxes-1">1</div>
+        <div class="box boxes-2">2</div>
+        <div class="box boxes-3">3</div>
+        <div class="box boxes-4">4</div>
+        <div class="box boxes-5">5</div>
+        <div class="box boxes-6">6</div>
+    </div>
+</body>
+</html>

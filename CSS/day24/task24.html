@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gridtask</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            padding: 10px;
+            width: 840px;
+            background-color: rgba(196, 196, 241, 0.79);
+            display: grid;
+            grid-template-rows: repeat(4,100px);
+            grid-template-columns: repeat(4,200px);
+            gap: 10px;
+        }
+        .box{
+            background-color: white;
+        }
+        .box1{
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+        .box3{
+            /* grid-row-start: 1;
+            grid-row-end: 3; */
+            grid-column-start :3 ;
+            grid-column-end: 5;
+        }
+        .box8{
+            grid-row-start: 3;
+            grid-row-end: 5;
+        }
+        .box4{
+            grid-row-start: 3;
+            grid-row-end: 4;
+        }
+        .box6{
+            grid-row-start: 2;
+            grid-row-end: 4;
+        }
+        .box10{
+            grid-row-start: 2;
+            grid-row-end: 3;
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+        .box11{
+            grid-column-start: 3;
+            grid-column-end:5
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+        <div class="box box5">5</div>
+        <div class="box box6">6</div>
+        <div class="box box7">7</div>
+        <div class="box box8">8</div>
+        <div class="box box9">9</div>
+        <div class="box box10">10</div>
+        <div class="box box11">11</div>
+    </div>
+</body>
+</html>
