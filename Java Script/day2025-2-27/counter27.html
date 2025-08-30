@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .count {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #333; 
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            margin: 5px;
+            cursor: pointer;
+            border: none;
+            background-color: #d4edd4;
+            color: white;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #73b2dc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Counter App</h1>
+        <div class="count" id="countDisplay">0</div>
+        <div class="button">
+            <button id="increaseBtn">Increase</button>
+            <button id="decreaseBtn">Decrease</button>
+            <button id="resetBtn">Reset</button>
+        </div>
+    </div>
+    <script>
+        const countDisplay = document.getElementById('countDisplay');
+        const increaseBtn = document.getElementById('increaseBtn');
+        const decreaseBtn = document.getElementById('decreaseBtn');
+        const resetBtn = document.getElementById('resetBtn');
+        let count = 0;
+        function updateDisplay() {
+            countDisplay.textContent = count;
+        }
+        increaseBtn.addEventListener('click', () => {
+            count++;
+            updateDisplay();
+        });
+        decreaseBtn.addEventListener('click', () => {
+            count--;
+            updateDisplay();
+        });
+        resetBtn.addEventListener('click', () => {
+            count = 0;
+            updateDisplay();
+        });
+    </script>
+</body>
+</html>

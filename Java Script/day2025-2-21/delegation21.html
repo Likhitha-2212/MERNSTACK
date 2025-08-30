@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delegation</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row;
+            width: 500px;
+            height: 400px;
+            background-color: #f1f1f1;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: #333;
+            color:#fff;
+            border: 1px solid #fff;
+            margin: 15px;
+        }
+        .red{
+            background-color: red;
+        }
+        .orange{
+            background-color: orange;
+        }
+        .yellow{
+            background-color: yellow;
+        }
+        .blue{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <!-- <button type="button" id="heading">Event Target</button> -->
+<!-- <script>
+    const btn=document.querySelector('#heading');
+    heading.addEventListener("click",(event)=>{
+        console.log("event has been fired");
+        console.log(event);
+    }) 
+</script>-->
+        <div class="container">
+            <div class="box red"></div>
+            <div class="box orange"></div>
+            <div class="box yellow"></div>
+            <div class="box blue"></div>
+        </div>
+        <p id="selectedBox"></p>
+        <script>
+            const container=document.querySelector(".container");
+            const selected =document.getElementById("selectedBox");
+            // const selected =document.querySelector("#selectedBox");
+            container.addEventListener("click",(event)=>{
+                console.log(event);
+                console.log(event.target);
+                selected.textContent=`Selected box is ${event.target.className}`;
+            })
+        </script>
+</body>
+</html>

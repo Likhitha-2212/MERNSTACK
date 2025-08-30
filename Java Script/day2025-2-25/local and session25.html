@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>local and session storage</h1>
+    <script>
+        // storing data int local storage
+
+        localStorage.setItem("name", "Veeramma");
+        localStorage.setItem("age", "22");
+        localStorage.setItem("gender", "female");
+        localStorage.setItem("country", "India");
+        localStorage.setItem("city", "Srikakulam");
+
+
+        //retreiving  items from local storage
+
+        const name = localStorage.getItem("name");
+        const age = localStorage.getItem("age");
+        console.log(name, age);
+
+
+        // remove items fromthe local storage
+
+        localStorage.removeItem("city");
+
+
+    </script>
+</body>
+</html>

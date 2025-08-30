@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Github Username Finder using the GitHub API</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <!-- search the user components -->
+    <div class="container">
+        <h1>GitHub User Finder</h1>
+        <div class="search-box">
+            <input type="text" id="username" placeholder="Enter GitHub Username">
+            <button onclick="getUser()">Search</button>
+        </div>
+        <p id="error-message" class="error-message"></p>
+        <div class="user-card" id="user-card">
+            <img id="avatar" src="" alt="Profile Picture">
+            <h2 id="name"></h2>
+            <p id="bio"></p>
+            <div class="user-stats">
+                <div><strong id="followers">0</strong> Followers</div>
+                <div><strong id="repos">0</strong> Repos</div>
+                <div><strong id="following">0</strong> Following</div>
+            </div>
+            <p><a id="profile-link" href="#" target="_blank" >View Profile</a></p>
+        </div>
+    </div>
+
+    <script src="script28.js"></script>
+  </body>
+</html>

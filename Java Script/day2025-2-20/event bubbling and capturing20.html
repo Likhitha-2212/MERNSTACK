@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event bubbling and capturing</title>
+    <style>
+      #grandparent,
+      #parent,
+      #child {
+        padding: 20px;
+        margin: 10px;
+        border: 2px solid black;
+        text-align: center;
+      }
+      #grandparent {
+        background-color: red;
+      }
+      #parent {
+        background-color: green;
+      }
+      #child {
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="grandparent">
+      grandparent
+
+      <div id="parent">
+        parent
+
+        <div id="child">child</div>
+      </div>
+    </div>
+
+    <script>
+
+      // event bubbling and its preventing
+    //   const grandparent = document.getElementById("grandparent");
+    //   grandparent.addEventListener("click", (event) => {
+    //     console.log("grandparent is clicked");
+    //     event.stopPropagation();
+    //   });
+
+    //   const parent = document.getElementById("parent");
+    //   parent.addEventListener("click", (event) => {
+    //     console.log("parent is clicked");
+    //     event.stopPropagation();
+    //   });
+
+    //   const child = document.getElementById("child");
+    //   child.addEventListener("click", (event) => {
+    //     console.log("child is clicked");
+    //     event.stopPropagation();
+        
+    //   });
+
+      // event capturing
+        // const grandparent = document.getElementById("grandparent");
+        // grandparent.addEventListener("click", () => {
+        //   console.log("grandparent is clicked");
+        // },true);
+
+        // const parent = document.getElementById("parent");
+        // parent.addEventListener("click", () => {
+        //   console.log("parent is clicked");
+        // },true);
+
+        // const child = document.getElementById("child");
+        // child.addEventListener("click", () => {
+        //   console.log("child is clicked");
+        // },true);
+
+    //   event delegation
+        
+    </script>
+  </body>
+</html>

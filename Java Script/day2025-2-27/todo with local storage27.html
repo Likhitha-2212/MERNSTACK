@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO WITH LOCAL STORAGE</title>
+    <style>
+        body{
+        font-family: Arial,sans-serif;
+        text-align: center;
+        background-color: #f7f7f7;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+      }
+      #todo-container{
+        width: 350px;
+        padding: 20px;
+        background: white;
+        border-radius: 5px;
+        box-shadow: 0 5px 8px rgba(0,0,0,0.2);
+        text-align: center;
+      }
+      h2{
+        margin-bottom: 20px;
+      }
+      input{
+        width: 80%;
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        margin-bottom: 10px;
+      }
+      button{
+        padding:8px 23px;
+        background-color: #3c483f;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      button:hover{
+        background-color: #d4eeda;
+      }
+      ul{
+        list-style: none;
+        padding: 0;
+      }
+      li{
+        background: #f9f9f9;
+        margin: 5px 0;
+        padding:8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .completed{
+        text-decoration: line-through;
+        color: grey;
+      }
+      .delete-btn{
+        background: red;
+        border: none;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+      }
+    </style>
+</head>
+<body>
+    <div class="container" id="todo-container">
+        <h2>Todo List with Local Storage</h2>
+        <input type="text" id="taskInput" placeholder="Add a new Task.."/>
+        <button onClick="addTask()">Add Task</button>
+        <ul id="taskList"></ul>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded",loadTask);
+        function addTask(){
+            let taskInput=document.getElementById("taskInput");
+            let taskText=taskInput.value.trim();
+            if (taskText === "") {
+                alert("Please enter a task");
+                return;
+            }
+            let tasks=JSON.parse(localStorage.getItem("tasks")) || [];
+            tasks.push({text:taskText,completed:false});
+            localStorage.setItem("tasks",JSON.stringify(tasks));
+            taskInput.value="";
+            renderTasks();
+        }
+        // Renders the task in the task list. if there are no tasks,renders an empty list
+        function renderTasks(){
+            let taskList=document.getElementById("taskList");
+            taskList.innerHTML="";
+            let tasks=JSON.parse(localStorage.getItem("tasks")) || [];
+            tasks.forEach((task,index)=>{
+                let li=document.createElement("li");
+                li.textContent=task.text;
+                if(task.completed){
+                    li.classList.add("completed");
+                }
+                li.addEventListener("click",()=>toggleTask(index));
+                let deleteBtn=document.createElement("button");
+                deleteBtn.textContent = "Remove";
+                deleteBtn.classList.add("delete-btn");
+                deleteBtn.addEventListener("click",(e)=>{
+                    e.stopPropagation();
+                    deleteTask(index);
+                });
+                li.appendChild(deleteBtn);   //button is appended to the li
+                taskList.appendChild(li);
+            });
+        }
+        function toggleTask(index){
+            let tasks=JSON.parse(localStorage.getItem("tasks")) || [];
+            tasks[index].completed=!tasks[index].completed;
+            localStorage.setItem("tasks",JSON.stringify(tasks));
+            renderTasks();
+        }
+    //     /**
+    //    * Deletes a task from the list by its index.
+    //    * {number} index - The index of the task to be deleted.
+    //    * Removes the task from local storage and updates the displayed task list.
+    //    */
+        function deleteTask(index){
+            let tasks=JSON.parse(localStorage.getItem("tasks")) || [];
+            tasks.splice(index,1);
+            localStorage.setItem("tasks",JSON.stringify(tasks));
+            renderTasks();
+        }
+    //       /**
+    //    * Loads and renders tasks from local storage.
+    //    * Retrieves the tasks stored in local storage and displays them in the task list.
+    //    */
+        function loadTasks(){
+            renderTasks();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+    <style>
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .count {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #333; 
+        }
+        #button1 {
+            padding: 10px 20px;
+            font-size: 1rem;
+            margin: 5px;
+            cursor: pointer;
+            border: none;
+            background-color: #d4edd4;
+            color: white;
+            border-radius: 5px;
+        }
+        #button2 {
+            padding: 10px 20px;
+            font-size: 1rem;
+            margin: 5px;
+            cursor: pointer;
+            border: none;
+            background-color: #d4edd4;
+            color: white;
+            border-radius: 5px;
+        }
+        #button3 {
+            padding: 10px 20px;
+            font-size: 1rem;
+            margin: 5px;
+            cursor: pointer;
+            border: none;
+            background-color: #d4edd4;
+            color: white;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: #73b2dc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>COUNTER APP</h1>
+        <div class="count">0</div>
+        <div class="increase" id="button1">Increase</div>
+        <div class="decrease" id="button2">Decrease</div>
+        <div class="reset" id="button3">Reset</div>
+    </div>
+    <p id="selectedBox"></p>
+    <script>
+        const container=document.querySelector(".container");
+        const selected =document.getElementById("selectedBox");
+        let displaycount=document.getElementsByClassName("count");
+        let count=0;
+        container.addEventListener("click",(event)=>{
+            console.log(event);
+            console.log(event.target);
+            let className=event.target.className;
+            if(className=='increase')
+        {
+            count++;
+        }
+        else if(className=='decrease')
+        {
+            count--;
+        }
+        else if(className=='reset')
+        {
+            count=0;
+        }
+            displaycount[0].textContent=count;
+            selected.textContent=`Button is ${event.target.className}`;
+            
+        })
+    </script>
+</body>
+</html>

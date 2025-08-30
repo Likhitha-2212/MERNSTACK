@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+
+        padding: 0;
+
+        box-sizing: border-box;
+      }
+    .container {
+        text-align: center;
+        background-color: #dbeaeb;
+        border: 5px solid #000107;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        height: 100%;
+        width: 90%;
+        margin:5%;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <div
+      style="width: 100%; display: flex; align-items: center; flex-wrap: wrap"
+      class="main"
+    ></div>
+    </div>
+    <script>
+      async function fetchNewApiTask() {
+        try {
+          const response = await fetch(
+            "https://fakestoreapi.com/products"
+          );
+          const data = await response.json();
+          let main = document.querySelector(".main");
+          data.forEach((element) => {
+            let { id, title, price, image } = element;
+            console.log(image);
+            main.innerHTML += `<div
+                style="
+                    width: 200px;
+                    height: 300px;
+                    background-color: rgba(0, 0, 0, 0.104);
+                    border-radius: 5px;
+                    flex-direction: row;
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+                    flex-direction: column;
+                    overflow: hidden;
+                    margin:10px
+                "
+                >
+                <img
+                    style="width: 200px; height: 150px"
+                    src="${image}"
+                    />
+                <h5>${title}</h5>
+                <p>${price}</p>
+                count=
+                <h1 id="text">0</h1>
+                <div id="button">
+                    <button id="decrement">-</button>
+                    <button id="increment">+</button>
+                </div>
+                <button>Add to Cart</button>
+                </div>`;
+                
+        });
+          console.log(data);
+        } catch (error) {
+          console.log(error);
+        }
+      }
+      fetchNewApiTask();
+
+      let count = 0;
+                document.getElementById('button').addEventListener('click', (event) => {
+                    if (event.target.tagName !== 'BUTTON') return;
+
+                    const id = event.target.id;
+
+                    if (id === 'increment') {
+                        count++;
+                    } else if (id === 'decrement') {
+                        if (count <= 0) {
+                            alert("Can't go beyond this");
+                            return;
+                        }
+                        count--;
+                    }
+                    document.getElementById('text').textContent = count;
+                });
+    </script>
+  </body>
+</html>
