@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Image Gallery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px; 
+      padding: 16px;
+      justify-content: center;
+    }
+    .gallery img {
+      width: 30%;
+      border-radius: 8px;
+    }
+
+    .gallery img:hover {
+      opacity: 0.7; 
+    }
+    @media (max-width: 600px) {
+        .gallery{
+            justify-items: flex-start;
+        }
+      .gallery img {
+        width: 100%; 
+      }
+    }
+  </style>
+</head>
+<body>
+
+<h1 style="text-align: center;">Flexbox Image Gallery</h1>
+<div class="gallery">
+  <img src="smiles.jpeg" alt="Image 1">
+  <img src="smiles.jpeg" alt="Image 2">
+  <img src="smiles.jpeg" alt="Image 3">
+  <img src="smiles.jpeg" alt="Image 4">
+  <img src="smiles.jpeg" alt="Image 5">
+  <img src="smiles.jpeg" alt="Image 6">
+</div>
+
+</body>
+</html>

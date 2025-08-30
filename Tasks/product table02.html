@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Comparison Table</title>
+    <style>
+    .comparison-table {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+
+.product-column {
+    flex-basis: 300px;
+    margin: 20px;
+    padding: 20px;
+    border: 5px solid #f0ebeb;
+    border-radius: 4px;
+}
+
+.product-column h4 {
+    margin-top: 0;
+}
+
+@media only screen and (max-width: 300px) {
+    .product-column {
+        flex-basis: 100%;
+        margin: 20px 0;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="comparison-table">
+        <div class="product-column">
+            <h4>Product A</h4>
+            <p>Price:20/-</p><hr>
+            <p>Availability:In stock</p><hr>
+            <p>Ratings: 4</p>
+        </div>
+        <div class="product-column">
+            <h4>Product B</h4>
+            <p>Price:50/-</p><hr>
+            <p>Availability: Out of stock</p><hr>
+            <p>Ratings: 4.2</p>
+        </div>
+        <div class="product-column">
+            <h4>Product C</h4>
+            <p>Price: 100/-</p><hr>
+            <p>Availability:In stock</p><hr>
+            <p>Ratings: 4.8</p>
+        </div>
+    </div>
+</body>
+</html>
