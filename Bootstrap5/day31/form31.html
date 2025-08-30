@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+    crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+    crossorigin="anonymous">
+    </script>
+</head>
+<body>
+    <h1 align="center">Registration Form</h1><br>
+    <div class="container">
+        <form class="border p-4 shadow rounded bg-light">
+            <label for="Name" class="form-label">Enter your Name </label>
+            <div class="input-group">
+                <input type="text" class="form-control" id="Name" placeholder="First name">
+                <input type="text" class="form-control" id="Name" placeholder="Last Name">
+            </div><br>
+            <label for="Branch">Branch</label>
+            <input class=" form-control" type="Branch" id="Branch" placeholder="Enter your Branch"><br>
+            <label class="form-label" for="Year">Year</label>
+            <select class="form-select">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select><br>
+            <label for="Email">Email</label>
+            <input class=" form-control" type="email" id="email" placeholder="Enter your email"><br>
+            <label class="form-label" for="Password">Password</label>
+            <input class=" form-control" type="text" id="Password" placeholder="Enter your password"><br>
+            <label for="Gender">Gender</label>
+            <div>
+                <input type="checkbox" class="form-check-input">
+                <label for="switch" class="form-check-label">Male</label>
+                <input type="checkbox" class="form-check-input">
+                <label for="switch" class="form-check-label">Female</label>
+            </div><br>
+            <div class="form-check form-switch">
+                <input type="checkbox" name="" id="" class="form-check-input">
+                <label for="switch" class="form-check-label">I Agree terms and conditions</label>
+            </div><br>
+            <button type="submit" class="btn btn-primary w-100">Register</button>
+        </form>
+    </div>
+</body>
+</html>
